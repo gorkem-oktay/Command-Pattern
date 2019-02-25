@@ -55,7 +55,7 @@ class AbilityPanel {
 }
 ```
 
-We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just to not bother with null or empty indexes. setCommand() method is the one user(*Client*) will use to place commands. And user(*Client*) will make request via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
+We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just not to bother with null or empty indexes. setCommand() method is the one user(*Client*) will use to place commands. And user(*Client*) will make request via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
 
 ```kotlin
 with(abilityPanel){
