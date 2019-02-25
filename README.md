@@ -20,7 +20,7 @@ I know, it is a little bit complicated, but don't worry with a few example you c
 
 Firstly, we will create our Command interface. It is easy, it will have just one method;
 
-```
+```kotlin
 interface ICommand {
 
     fun execute()
@@ -29,7 +29,7 @@ interface ICommand {
 
 Now, we can make a concrete Command class that implements our interface;
 
-```
+```kotlin
 class AttackCommand(var character: ICharacter) : ICommand {
 
     override fun execute() {
