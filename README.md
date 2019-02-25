@@ -38,7 +38,7 @@ class AttackCommand(var character: ICharacter) : ICommand {
 }
 ```
 
-Here, we gave constructor to our character*(Receiver)* as a parameter to make our character*(Receiver)* to hit when command is executed. Then we will prepare ability panel*(Invoker)*;
+Here, we gave constructor to our character*(Receiver)* as a parameter to make our character_(Receiver)_ to hit when command is executed. Then we will prepare ability panel*(Invoker)*;
 
 ```kotlin
 class AbilityPanel {
