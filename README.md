@@ -18,7 +18,7 @@ Even though its usefulness, it is a little bit hard to understand and implement.
 
 I know, it is a little bit complicated, but don't worry with a few example you can overcome it. So for the first time, I will write actual codes in here. Okey, lets get to work.
 
-Firstly, we will create our Command interface. It is easy, it will have just one method;
+Firstly, we will create our *Command* interface. It is easy, it will have just one method;
 
 ```kotlin
 interface ICommand {
@@ -27,7 +27,7 @@ interface ICommand {
 }
 ```
 
-Now, we can make a concrete Command class that implements our interface;
+Now, we can make a *Concrete Command* class that implements our interface;
 
 ```kotlin
 class AttackCommand(var character: ICharacter) : ICommand {
@@ -38,7 +38,7 @@ class AttackCommand(var character: ICharacter) : ICommand {
 }
 ```
 
-Here, we gave constructor to our character*(Receiver)* as a parameter to make our character_(Receiver)_ to hit when command is executed. Then we will prepare ability panel*(Invoker)*;
+Here, we gave constructor to our character(*Receiver*) as a parameter to make our character(*Receiver*) to hit when command is executed. Then we will prepare ability panel(*Invoker*);
 
 ```kotlin
 class AbilityPanel {
@@ -55,7 +55,7 @@ class AbilityPanel {
 }
 ```
 
-We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just to not bother with null or empty indexes. setCommand() method is the one user*(Client)* will use to place commands. And user*(Client)* will make request via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
+We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just to not bother with null or empty indexes. setCommand() method is the one user(*Client*) will use to place commands. And user(*Client*) will make request via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
 
 ```kotlin
 with(abilityPanel){
