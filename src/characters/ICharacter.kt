@@ -5,12 +5,17 @@ import equipments.IEquipment
 import equipments.IEquipmentFactory
 import equipments.weapons.IWeapon
 import observables.Health
+import observables.Mana
+import spells.ISpell
 
+// Receiver for command pattern
 abstract class ICharacter {
 
     var name: String = "Unknown Name"
     var type: String = "Unknown Type"
     lateinit var health: Health
+    var mana: Mana? = null
+    var target: ICharacter? = null
 
     private var equipments = HashMap<EquipmentSlot, IEquipment>()
 
@@ -60,12 +65,27 @@ abstract class ICharacter {
         equipments[equipment.slot] = equipment
     }
 
-    fun hit(to: ICharacter) {
+    fun hit() {
         val weapon = getWeapon()
 
-        if(weapon != null){
+        if(target != null && weapon != null){
             val damage = weapon.calculateDamage()
-            to.health.decrease(damage)
+            target!!.health.decrease(damage)
+        }
+    }
+
+    fun move(){
+        println("$type moved")
+    }
+
+    fun cast(spell: ISpell){
+        if (mana != null && target != null) {
+            if (mana!!.getValue() > spell.mana) {
+                mana!!.decrease(spell.mana)
+                spell.cast()
+            } else {
+                println("Not enough mana")
+            }
         }
     }
 }
