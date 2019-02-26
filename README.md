@@ -67,4 +67,4 @@ with(abilityPanel){
 }
 ```
 
-That's all. They can be changed event at runtime, and also we are not restricted to just our own character. We can pass any object to command's constructor and it will do the commands. It just needs to be subclass of ICharacter. With this, we achieved our functionality splendidly and ready to use.
+That's all. They can be changed even at runtime, and also we are not restricted to just our own character. We can pass any object to command's constructor and it will do the commands. It just needs to be subclass of ICharacter. With this, we achieved our functionality splendidly and ready to use.
