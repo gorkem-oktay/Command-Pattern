@@ -10,7 +10,7 @@ Command pattern, encapsulates a request as an object, thereby letting you parame
 It is time to give orders our character to take some actions like move, attack, cast a spell, etc...(Sorry, he won't actually do it). I am thinking to implement it like World of Warcraft's ability panel. There will be ten slot and our user may place abilites wherever he/she wishes. So hardcoding like "Press W to move forward", is out of options. And it is even a bad idea from the beginning to do that. Because our user can't change key binding as it suits himself/herself. Then we need a pattern with some flexibility to achieve this functionality. And here comes to Command Pattern to save the day.
 
 Even though its usefulness, it is a little bit hard to understand and implement. Because it composed of a few components;
-  - Firstly, **_Client_**, it creates the commands and make requests, equivalent to our user.
+  - Firstly, **_Client_**, it creates the commands and make requests, equivalent to our main.
   - Secondly, **_Invoker_**, it holds a command and starts to execution, equivalent to our ability panel.
   - Thirdly, **_Receiver_**, it knows what to do with commands and requests, equivalent to our character.
   - Fourthly, **_Command_**, it is an interface for all the commands.
@@ -55,7 +55,7 @@ class AbilityPanel {
 }
 ```
 
-We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just not to bother with null or empty indexes. setCommand() method is the one user(*Client*) will use to place commands. And user(*Client*) will make request via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
+We created ten buttons to hold our commands. NoCommand is an empty command that does nothing. It is just not to bother with null or empty indexes. setCommand() will be used to place commands. And in main(*Client*), we will make requests via onButtonClicked() method. Now, we can set our commands to panel and execute them from there.
 
 ```kotlin
 with(abilityPanel){
