@@ -1,11 +1,3 @@
 package spells
 
-class Fireball: ISpell() {
-
-    init {
-        name = "Fireball"
-        mana = 10
-        level = 1
-        castTime = 1.5
-    }
-}
+class Fireball: ISpell("Fireball", 10, 1, 1.5)

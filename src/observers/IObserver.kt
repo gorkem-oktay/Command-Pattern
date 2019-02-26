@@ -2,7 +2,7 @@ package observers
 
 import observables.IObservable
 
-abstract class IObserver {
+interface IObserver {
 
-    abstract fun updated(observable: IObservable, value: Any)
+    fun updated(observable: IObservable, value: Any)
 }
