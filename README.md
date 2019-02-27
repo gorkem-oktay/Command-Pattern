@@ -16,7 +16,7 @@ Even though its usefulness, it is a little bit hard to understand and implement.
   - Fourthly, **_Command_**, it is an interface for all the commands.
   - And lastly, **_Concrete Commands_**, it binds actions and receivers, then carries out requests by calling actions on the receiver.
 
-I know, it is a little bit complicated, but don't worry with a few example you can overcome it. So for the first time, I will get my hand dirty and write the actual codes in here to explain it better. Okay, lets get to work.
+I know, it is a little bit complicated, but don't worry with a few example you can overcome it. Okay, lets get to work.
 
 Firstly, we will create our *Command* interface. It is easy, it will have just one method;
 
