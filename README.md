@@ -7,7 +7,7 @@ In these repositories, some design patterns are implemented to a mini game syste
 Command pattern, encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
 
 ### Description
-It is time to give orders our character to take some actions like move, attack, cast a spell, etc...(Sorry, he won't actually do it). I am thinking to implement it like World of Warcraft's ability panel. There will be ten slot and our user may place abilites wherever he/she wishes. So hardcoding like "Press W to move forward", is out of options. And it is even a bad idea from the beginning to do that. Because our user can't change key binding as it suits himself/herself. Then we need a pattern with some flexibility to achieve this functionality. And here comes to Command Pattern to save the day.
+It is time to give orders our character to take some actions like move, attack, cast a spell, etc...(Sorry, he won't actually do it). I am thinking to implement it like World of Warcraft's ability panel. There will be ten slot and our users may place abilites wherever they wishes. So hardcoding like "Press W to move forward", is out of options. And it is even a bad idea from the beginning to do that. Because our users can't change key binding as it suits themselves. Then we need a pattern with some flexibility to achieve this functionality. And here comes to Command Pattern to save the day.
 
 Even though its usefulness, it is a little bit hard to understand and implement. Because it composed of a few components;
   - Firstly, **_Client_**, it creates the commands and make requests, equivalent to our main.
